@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercice 2 Figures 5 </title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      background: #e8e8e8;
+      padding: 20px;
+    }
+
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      background: transparent;
+      gap:6px;
+    }
+
+    .bloc {
+      width: 100%;
+      padding: 18px 14px;
+      font-size: .85rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 6px;
+      border: 1px solid rgba(0,0,0,.1);
+    }
+
+
+    /* 1 — Header : bleu acier (pleine largeur toujours) */
+    .bloc-header {
+      background: #5b7fa6;
+      color: #fff;
+      text-align: center;
+      font-size: 1rem;
+      height: 90%;
+    }
+
+    /* 2 — Navigation : beige/sable (pleine largeur) */
+    .bloc-section {
+      background: #c8b89a;
+      padding: 1.2rem 1.5rem;
+     
+    }
+
+
+    /* ─── Rangée  4 colonnes (tablette) ─── */
+    .row-4col{
+     display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 6px;
+    }
+     .row-4col > div {
+      padding: 7rem 1rem;
+      display: flex; 
+      gap: 6px;
+      margin-bottom: 6px;
+      height: 100px;
+     
+    }
+    .row-4col .bloc {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    .section1{
+      background: #1b9b52;
+      
+    }
+    .section2 {
+      background: #1b9b52;
+      
+    }
+    .section3 {
+      background: #1b9b52;
+      
+    }
+    .section4 {
+      background: #1b9b52;
+     
+    }
+    
+
+    /* ─── Rangée2 2 colonnes ─── */
+    .bloc-menu-left {
+      background: #18279a;
+      padding: 3rem 1.5rem;
+    
+    }
+     .bloc-panel-right{
+      background: #040e6a;
+      padding: 3rem 1.5rem;
+    }
+    
+    .bloc-footer {
+      background: #c0b8c8;
+      text-align: center;
+      padding: 1.5rem;
+    }
+    .row-2col {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 6px;
+    
+    }
+    .row-2col .bloc {
+      flex: 1;
+      margin-bottom: 0;
+      
+    }
+   
+  </style>
+</head>
+<body>
+<a href="compterendutp2.html"><-retour</a>
+<div class="page">
+
+  <!-- Bloc 1 : Header (pleine largeur) -->
+  <div class="bloc bloc-header">Header</div>
+
+  <!-- Bloc 2 : section 0 -->
+  <div class="bloc bloc-section">Section 0</div>
+
+  <!-- Rangée : 4 colonnes  -->
+  <div class="row-4col">
+    <div class="bloc section1">section1</div>
+    <div class="bloc section2">section1</div>
+    <div class="bloc section3">section3</div>
+    <div class="bloc section4">section4</div>
+  </div>
+
+  <!-- Rangée 2 : 2 colonnes -->
+  <div class="row-2col">
+    <div class="bloc bloc-menu-left">Section 5</div>
+    <div class="bloc bloc-panel-right">Section 6</div>
+  </div>
+
+  <!-- Bloc 11 : Footer (pleine largeur) -->
+  <div class="bloc bloc-footer">Footer</div>
+
+</div>
+
+</body>
+</html>

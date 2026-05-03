@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Exercice2 Figures 5.1 / 5.2 – Layout Responsive</title>
+  <style>
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      font-size: 13px;
+      background: #e8e8e8;
+      padding: 20px;
+    }
+
+    .page {
+      max-width: 700px;
+      margin: 0 auto;
+      background: transparent;
+    }
+
+    .bloc {
+      width: 100%;
+      padding: 18px 14px;
+      font-size: .85rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 6px;
+      border: 1px solid rgba(0,0,0,.1);
+    }
+
+    .bloc-header {
+      background: #5b7fa6;
+      color: #fff;
+      text-align: center;
+      font-size: 1rem;
+    }
+    .bloc-nav {
+      background: #c8b89a;
+    }
+
+    .bloc-search {
+      background: #dde3ea;
+    }
+    .bloc-aside-left {
+      background: #b8c8d8;
+    }
+
+    .bloc-content-right {
+      background: #e8b4b0;
+    }
+
+    .bloc-menu-left {
+      background: #c4d9b8;
+    }
+    .bloc-panel-right {
+      background: #f0c898;
+    }
+    .bloc-main {
+      background: #3db8e8;
+      color: #fff;
+    }
+    .bloc-secondary {
+      background: #2090c8;
+      color: #fff;
+    }
+    .bloc-tertiary {
+      background: #1870a8;
+      color: #fff;
+    }
+    .bloc-footer {
+      background: #c0b8c8;
+      text-align: center;
+    }
+/* ═══════════════════════════════════════════════════
+       TABLETTE — Figure 5.1 (≤ 768px)
+    ═══════════════════════════════════════════════════ */
+    .row-2col {
+      display: flex; /* Rien à changer : flex par défaut = tablette */
+      gap: 6px;
+      margin-bottom: 6px;
+    }
+    .row-2col .bloc {
+      flex: 1;
+      margin-bottom: 0;
+    }
+    /* ═══════════════════════════════════════════════════
+       MOBILE — Figure 5.2 (≤ 480px)
+    ═══════════════════════════════════════════════════ */
+    @media (max-width: 480px) {
+      .row-2col {
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .row-2col .bloc {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+<a href="compterendutp2.html"><-retour</a>
+<div class="page">
+
+  <!-- Bloc 1 : Header (pleine largeur) -->
+  <div class="bloc bloc-header">Header</div>
+
+  <!-- Bloc 2 : Navigation (pleine largeur) -->
+  <div class="bloc bloc-nav">Navigation</div>
+
+  <!-- Bloc 3 : Recherche (pleine largeur) -->
+  <div class="bloc bloc-search">Barre de recherche</div>
+
+  <!-- Rangée 1 : 2 colonnes (Aside gauche + Contenu droite) -->
+  <div class="row-2col">
+    <div class="bloc bloc-aside-left">Colonne gauche<br>(aside / menu)</div>
+    <div class="bloc bloc-content-right">Colonne droite<br>(contenu principal)</div>
+  </div>
+
+  <!-- Rangée 2 : 2 colonnes (Menu gauche + Panel droite) -->
+  <div class="row-2col">
+    <div class="bloc bloc-menu-left">Section gauche<br>(liens / catégories)</div>
+    <div class="bloc bloc-panel-right">Section droite<br>(widgets / infos)</div>
+  </div>
+
+  <!-- Bloc 8 : Contenu principal (pleine largeur) -->
+  <div class="bloc bloc-main">Section principale</div>
+
+  <!-- Bloc 9 : Section secondaire (pleine largeur) -->
+  <div class="bloc bloc-secondary">Section secondaire</div>
+
+  <!-- Bloc 10 : Section tertiaire (pleine largeur) -->
+  <div class="bloc bloc-tertiary">Section tertiaire</div>
+
+  <!-- Bloc 11 : Footer (pleine largeur) -->
+  <div class="bloc bloc-footer">Footer</div>
+
+</div>
+
+</body>
+</html>
